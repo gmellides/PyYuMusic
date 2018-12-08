@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface>
+  <object class="ttk.Frame" id="mainFrame">
+    <property name="height">200</property>
+    <property name="width">200</property>
+    <layout>
+      <property name="column">0</property>
+      <property name="propagate">True</property>
+      <property name="row">0</property>
+    </layout>
+    <child>
+      <object class="ttk.Label" id="lbl_newPlaylist">
+        <property name="font">{Calibri Light} 16 {}</property>
+        <property name="text" translatable="yes">New Playlist</property>
+        <layout>
+          <property name="column">1</property>
+          <property name="pady">10</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="lbl_youtubeURL">
+        <property name="text" translatable="yes">Youtube URL:</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="padx">5</property>
+          <property name="pady">10</property>
+          <property name="propagate">True</property>
+          <property name="row">3</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Entry" id="txt_url">
+        <property name="width">55</property>
+        <layout>
+          <property name="column">1</property>
+          <property name="pady">10</property>
+          <property name="propagate">True</property>
+          <property name="row">3</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="btn_addSong">
+        <property name="command">btn_addSong_action</property>
+        <property name="text" translatable="yes">Add Song</property>
+        <layout>
+          <property name="column">3</property>
+          <property name="padx">5</property>
+          <property name="pady">10</property>
+          <property name="propagate">True</property>
+          <property name="row">3</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="btn_savePlaylist">
+        <property name="command">btn_savePlaylist_action</property>
+        <property name="text" translatable="yes">Save Playlist</property>
+        <layout>
+          <property name="column">3</property>
+          <property name="pady">10</property>
+          <property name="propagate">True</property>
+          <property name="row">4</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Frame" id="listFrame">
+        <property name="height">200</property>
+        <property name="width">200</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="columnspan">4</property>
+          <property name="pady">10</property>
+          <property name="propagate">True</property>
+          <property name="row">2</property>
+        </layout>
+        <child>
+          <object class="ttk.Treeview" id="lst_songs">
+            <property name="selectmode">extended</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="ipadx">120</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+            </layout>
+            <child>
+              <object class="ttk.Treeview.Column" id="clmTitle">
+                <property name="column_anchor">w</property>
+                <property name="heading_anchor">w</property>
+                <property name="minwidth">5</property>
+                <property name="stretch">true</property>
+                <property name="text" translatable="yes">Song</property>
+                <property name="tree_column">true</property>
+                <property name="visible">true</property>
+                <property name="width">195</property>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Treeview.Column" id="clmDuration">
+                <property name="column_anchor">w</property>
+                <property name="heading_anchor">w</property>
+                <property name="minwidth">20</property>
+                <property name="stretch">true</property>
+                <property name="text" translatable="yes">Duration</property>
+                <property name="tree_column">false</property>
+                <property name="visible">true</property>
+                <property name="width">5</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Frame" id="playlistNameFrame">
+        <property name="height">200</property>
+        <property name="width">200</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="columnspan">4</property>
+          <property name="propagate">True</property>
+          <property name="row">1</property>
+          <property name="sticky">w</property>
+        </layout>
+        <child>
+          <object class="ttk.Label" id="lbl_playlistName">
+            <property name="text" translatable="yes">Playlist Name:</property>
+            <property name="width">0</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="padx">10</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Entry" id="txt_playlistName">
+            <property name="width">53</property>
+            <layout>
+              <property name="column">1</property>
+              <property name="columnspan">2</property>
+              <property name="padx">10</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
