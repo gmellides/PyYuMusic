@@ -5,7 +5,6 @@
     inside the graphics folder.
     Specs: Windows are designed using Pygubu (the files that have .ui Extension)
     Pafy module is used to
-    Project Usage: Educational only. Non Commercial use No Rights reserved.
 """
 import os
 import tkinter
@@ -19,6 +18,6 @@ if __name__ == '__main__':
     # Calls the Player Window
     root = tkinter.Tk()
     app = Window.PlayerForm(root)
-    root.title("Youtube")
+    root.title("PyYuMusic")
     root.resizable(False, False)
     root.mainloop()
